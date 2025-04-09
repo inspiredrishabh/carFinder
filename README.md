@@ -1,15 +1,11 @@
 # 🚗 Car Finder
 
-![Car Finder Banner](https://i.imgur.com/XYZ123.png)
+![Car Finder Banner](/01.png)
+![Car Finder Banner](/02.png)
 
 ## 🌟 Overview
 
-Car Finder is a modern web application built to help users discover and explore future car models (2025+). With a sleek dark-themed interface and powerful search capabilities, users can easily filter through various car options to find their perfect match.
-
-**Live Demo:** [Coming Soon](#)
-
-[![GitHub stars](https://img.shields.io/github/stars/inspiredrishabh/carFinder?style=social)](https://github.com/inspiredrishabh/carFinder/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/inspiredrishabh/carFinder?style=social)](https://github.com/inspiredrishabh/carFinder/network/members)
+Car Finder is a modern web application built to help users discover and explore future car models (2025+). With a sleek dark-themed interface and powerful search capabilities, users can easily filter through various car options to find their perfect match
 
 ## ✨ Features
 
