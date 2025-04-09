@@ -23,7 +23,13 @@ function App() {
       model: "Camry",
       year: 2020,
       price: 25000,
-      image: "https://via.placeholder.com/300x200?text=Toyota+Camry",
+      image: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      mileage: 15000,
+      fuelType: "Gasoline",
+      transmission: "Automatic",
+      features: ["Bluetooth", "Backup Camera", "Cruise Control", "Keyless Entry"],
+      rating: 4.5,
+      location: "Seattle, WA"
     },
     {
       id: 2,
@@ -31,7 +37,13 @@ function App() {
       model: "Civic",
       year: 2021,
       price: 22000,
-      image: "https://via.placeholder.com/300x200?text=Honda+Civic",
+      image: "https://images.unsplash.com/photo-1590362891991-f776e747a588?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      mileage: 8000,
+      fuelType: "Gasoline",
+      transmission: "CVT",
+      features: ["Apple CarPlay", "Lane Assist", "Heated Seats", "Sunroof"],
+      rating: 4.7,
+      location: "Portland, OR"
     },
     {
       id: 3,
@@ -39,7 +51,13 @@ function App() {
       model: "Model 3",
       year: 2022,
       price: 45000,
-      image: "https://via.placeholder.com/300x200?text=Tesla+Model+3",
+      image: "https://images.unsplash.com/photo-1562016600-ece13e8ba570?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      mileage: 5000,
+      fuelType: "Electric",
+      transmission: "Automatic",
+      features: ["Autopilot", "Premium Sound", "Glass Roof", "Supercharging"],
+      rating: 4.9,
+      location: "San Francisco, CA"
     },
     {
       id: 4,
@@ -47,7 +65,13 @@ function App() {
       model: "X5",
       year: 2019,
       price: 55000,
-      image: "https://via.placeholder.com/300x200?text=BMW+X5",
+      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      mileage: 28000,
+      fuelType: "Diesel",
+      transmission: "Automatic",
+      features: ["Leather Seats", "Navigation", "Premium Audio", "Parking Sensors"],
+      rating: 4.3,
+      location: "Chicago, IL"
     },
     {
       id: 5,
@@ -55,8 +79,28 @@ function App() {
       model: "Mustang",
       year: 2018,
       price: 35000,
-      image: "https://via.placeholder.com/300x200?text=Ford+Mustang",
+      image: "https://images.unsplash.com/photo-1584345604476-8ec5f82d718c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      mileage: 32000,
+      fuelType: "Gasoline",
+      transmission: "Manual",
+      features: ["Convertible", "Leather Interior", "Performance Package", "Bluetooth"],
+      rating: 4.2,
+      location: "Las Vegas, NV"
     },
+    {
+      id: 6,
+      make: "Audi",
+      model: "A4",
+      year: 2021,
+      price: 42000,
+      image: "https://images.unsplash.com/photo-1606152421802-db97b9c7a11b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      mileage: 12000,
+      fuelType: "Gasoline",
+      transmission: "Automatic",
+      features: ["Quattro AWD", "Virtual Cockpit", "Bang & Olufsen Sound", "LED Headlights"],
+      rating: 4.6,
+      location: "Denver, CO"
+    }
   ];
 
   const handleSearch = (params) => {
