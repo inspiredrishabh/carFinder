@@ -29,7 +29,7 @@ const SearchForm = ({ onSearch, isSearching }) => {
   return (
     <div className="relative">
       {/* Background decoration removed gradient */}
-      
+
       {/* Actual form */}
       <div className="relative p-8 bg-gray-800 rounded-lg border border-gray-700">
         <div className="flex justify-between items-center mb-6">
@@ -43,15 +43,33 @@ const SearchForm = ({ onSearch, isSearching }) => {
             {advancedSearch ? (
               <>
                 <span>Basic Search</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clipRule="evenodd" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 ml-1"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z"
+                    clipRule="evenodd"
+                  />
                 </svg>
               </>
             ) : (
               <>
                 <span>Advanced Search</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clipRule="evenodd" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 ml-1"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                    clipRule="evenodd"
+                  />
                 </svg>
               </>
             )}
@@ -62,10 +80,17 @@ const SearchForm = ({ onSearch, isSearching }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Car make field - gaadi ka brand */}
             <div className="relative">
-              <label className="block text-sm font-medium text-gray-300 mb-1">Make</label>
+              <label className="block text-sm font-medium text-gray-300 mb-1">
+                Make
+              </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <svg className="h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <svg
+                    className="h-5 w-5 text-gray-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
                     <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
                     <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H11a1 1 0 001-1v-1h3.5a1 1 0 00.8-.4l1.5-2A1 1 0 0018 11h-1.5V8a1 1 0 00-1-1H15V4a1 1 0 00-1-1H3z" />
                   </svg>
@@ -83,7 +108,9 @@ const SearchForm = ({ onSearch, isSearching }) => {
 
             {/* Car model field - gaadi ka model */}
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-1">Model</label>
+              <label className="block text-sm font-medium text-gray-300 mb-1">
+                Model
+              </label>
               <input
                 type="text"
                 name="model"
@@ -96,7 +123,9 @@ const SearchForm = ({ onSearch, isSearching }) => {
 
             {/* Car year field - gaadi ka saal */}
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-1">Year</label>
+              <label className="block text-sm font-medium text-gray-300 mb-1">
+                Year
+              </label>
               <input
                 type="text"
                 name="year"
@@ -109,7 +138,9 @@ const SearchForm = ({ onSearch, isSearching }) => {
 
             {/* Price range field - price range (₹ symbol used) */}
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-1">Price Range</label>
+              <label className="block text-sm font-medium text-gray-300 mb-1">
+                Price Range
+              </label>
               <select
                 name="priceRange"
                 value={formData.priceRange}
@@ -118,7 +149,9 @@ const SearchForm = ({ onSearch, isSearching }) => {
               >
                 <option value="">Any Price Range</option>
                 <option value="low">Budget (&lt; ₹15,00,000)</option>
-                <option value="medium">Mid-Range (₹15,00,000 - ₹30,00,000)</option>
+                <option value="medium">
+                  Mid-Range (₹15,00,000 - ₹30,00,000)
+                </option>
                 <option value="high">Premium (&gt; ₹30,00,000)</option>
               </select>
             </div>
@@ -128,7 +161,9 @@ const SearchForm = ({ onSearch, isSearching }) => {
           {advancedSearch && (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 p-4 bg-gray-700 rounded-lg">
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">Mileage</label>
+                <label className="block text-sm font-medium text-gray-300 mb-1">
+                  Mileage
+                </label>
                 <select
                   name="mileage"
                   className="w-full px-4 py-2.5 bg-gray-600 text-white border border-gray-500 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -140,7 +175,9 @@ const SearchForm = ({ onSearch, isSearching }) => {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">Fuel Type</label>
+                <label className="block text-sm font-medium text-gray-300 mb-1">
+                  Fuel Type
+                </label>
                 <select
                   name="fuelType"
                   className="w-full px-4 py-2.5 bg-gray-600 text-white border border-gray-500 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -154,7 +191,9 @@ const SearchForm = ({ onSearch, isSearching }) => {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">Transmission</label>
+                <label className="block text-sm font-medium text-gray-300 mb-1">
+                  Transmission
+                </label>
                 <select
                   name="transmission"
                   className="w-full px-4 py-2.5 bg-gray-600 text-white border border-gray-500 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -177,17 +216,42 @@ const SearchForm = ({ onSearch, isSearching }) => {
             >
               {isSearching ? (
                 <span className="flex items-center">
-                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  <svg
+                    className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    ></path>
                   </svg>
                   Searching...
                 </span>
               ) : (
                 <>
                   Search Cars
-                  <svg className="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+                  <svg
+                    className="w-5 h-5 ml-2 -mr-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
                   </svg>
                 </>
               )}

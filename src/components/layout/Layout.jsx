@@ -1,5 +1,5 @@
-import React from 'react';
-import ThemeToggle from '../ui/ThemeToggle';
+import React from "react";
+import ThemeToggle from "../ui/ThemeToggle";
 
 // Layout component - pure app ka main structure
 const Layout = ({ children }) => {

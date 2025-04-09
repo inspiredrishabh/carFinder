@@ -23,17 +23,17 @@ const Header = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Main heading with gradient text */}
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">
           Car Finder
         </h1>
-        
+
         {/* Tagline */}
         <p className="mt-4 text-lg sm:text-xl opacity-80 max-w-xl mx-auto text-gray-300">
           Find the best car here at your specs
         </p>
-        
+
         {/* Action buttons */}
         <div className="mt-6 sm:mt-8 flex flex-wrap justify-center gap-4">
           <button className="px-6 py-2.5 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-200 hover:shadow-lg">
