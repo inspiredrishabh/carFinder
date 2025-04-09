@@ -1,7 +1,7 @@
 # 🚗 Car Finder
 
-![Car Finder Banner](/01.png)
-![Car Finder Banner](/02.png)
+![Car Finder Banner](/public/01.png)
+![Car Finder Banner](/public/02.png)
 
 ## 🌟 Overview
 
