@@ -4,6 +4,7 @@ import CarCard from "./CarCard";
 const CarList = ({ results, isSearching }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg p-6">
+      {/* Header with count of cars - kitni gaadiya mili hai */}
       <div className="flex justify-between items-center mb-6 border-b pb-4">
         <h2 className="text-2xl font-bold text-gray-800 flex items-center">
           <svg
@@ -38,6 +39,7 @@ const CarList = ({ results, isSearching }) => {
         </div>
       </div>
 
+      {/* Loading state - searching ka animation */}
       {isSearching ? (
         <div className="flex justify-center items-center h-80">
           <div className="relative h-24 w-24">
@@ -68,15 +70,16 @@ const CarList = ({ results, isSearching }) => {
           </div>
           <div className="ml-6">
             <h3 className="text-xl font-semibold text-gray-800">
-              Searching for your perfect match
+              Aapki gaadi ki khoj jaari hai
             </h3>
             <p className="text-gray-500 mt-2">
-              We're finding the best cars based on your criteria...
+              Hum aapke pasand ke hisaab se gaadiya dhund rahe hain...
             </p>
           </div>
         </div>
       ) : results.length > 0 ? (
         <>
+          {/* Search results - search ke results */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {results.map((car) => (
               <CarCard key={car.id} car={car} />
@@ -130,6 +133,7 @@ const CarList = ({ results, isSearching }) => {
           </div>
         </>
       ) : (
+        // Empty state - koi gaadi nahi mili
         <div className="flex flex-col items-center justify-center h-80 text-center bg-gray-50 rounded-lg border-2 border-dashed border-gray-300 p-8">
           <svg
             className="w-16 h-16 text-gray-400 mb-4"
@@ -142,18 +146,18 @@ const CarList = ({ results, isSearching }) => {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2"
-              d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              d="M9 172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
             ></path>
           </svg>
           <h3 className="text-xl font-semibold text-gray-700 mb-2">
-            No matching cars found
+            Koi gaadi nahi mili
           </h3>
           <p className="text-gray-500 max-w-md mx-auto mb-6">
-            We couldn't find any cars that match your search criteria. Try
-            adjusting your filters or broadening your search terms.
+            Aapke search criteria se match karne waali koi gaadi nahi mili. Apne
+            filters ko adjust karen ya search ko thoda aur broad karen.
           </p>
           <button className="px-6 py-2.5 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-colors">
-            Reset Search
+            Search Reset Karen
           </button>
         </div>
       )}

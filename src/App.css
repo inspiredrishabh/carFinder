@@ -41,16 +41,7 @@
   color: #888;
 }
 
-@keyframes gradient-x {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
+/* Animation for loading */
 @keyframes blob {
   0% {
     transform: translate(0px, 0px) scale(1);
@@ -64,11 +55,6 @@
   100% {
     transform: translate(0px, 0px) scale(1);
   }
-}
-
-.animate-gradient-x {
-  animation: gradient-x 15s ease infinite;
-  background-size: 400% 400%;
 }
 
 .animate-blob {

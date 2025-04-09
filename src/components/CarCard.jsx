@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const CarCard = ({ car }) => {
+  // Hover effect ke liye state
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -9,6 +10,7 @@ const CarCard = ({ car }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      {/* Car image section - gaadi ki photo wala section */}
       <div className="relative overflow-hidden h-56">
         <img
           src={car.image}
@@ -17,12 +19,14 @@ const CarCard = ({ car }) => {
             isHovered ? "scale-110" : "scale-100"
           }`}
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-60"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-30"></div>
 
+        {/* Car year badge - gaadi ka model year */}
         <div className="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
           {car.year}
         </div>
 
+        {/* Car title and rating */}
         <div className="absolute bottom-4 left-4 right-4">
           <h3 className="text-xl font-bold text-white">
             {car.make} {car.model}
@@ -50,14 +54,17 @@ const CarCard = ({ car }) => {
         </div>
       </div>
 
+      {/* Car details section - gaadi ki details ka section */}
       <div className="p-5">
         <div className="flex justify-between items-center mb-4">
+          {/* Price with ₹ symbol - keemat */}
           <span className="text-2xl font-bold text-gray-900">
-            ${car.price.toLocaleString()}
+            ₹{(car.price * 83).toLocaleString()}
           </span>
           <span className="text-sm text-gray-500">{car.location}</span>
         </div>
 
+        {/* Car specifications - gaadi ke specifications */}
         <div className="grid grid-cols-2 gap-3 mb-4">
           <div className="flex items-center text-gray-600">
             <svg
@@ -74,7 +81,7 @@ const CarCard = ({ car }) => {
                 d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
               ></path>
             </svg>
-            <span className="text-sm">{car.mileage.toLocaleString()} mi</span>
+            <span className="text-sm">{car.mileage.toLocaleString()} km</span>
           </div>
 
           <div className="flex items-center text-gray-600">
@@ -138,6 +145,7 @@ const CarCard = ({ car }) => {
           </div>
         </div>
 
+        {/* Car features - gaadi ke features */}
         <div className="flex flex-wrap gap-2 mb-4">
           {car.features.slice(0, 3).map((feature, index) => (
             <span
@@ -154,6 +162,7 @@ const CarCard = ({ car }) => {
           )}
         </div>
 
+        {/* Action buttons - action buttons */}
         <div className="mt-5 flex space-x-3">
           <button className="flex-1 px-4 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-200">
             View Details

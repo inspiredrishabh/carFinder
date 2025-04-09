@@ -5,6 +5,7 @@ import CarList from "./components/CarList";
 import "./App.css";
 
 function App() {
+  // Search parameters state - search ke parameters
   const [searchParams, setSearchParams] = useState({
     make: "",
     model: "",
@@ -12,102 +13,122 @@ function App() {
     priceRange: "",
   });
 
+  // Results and loading state - results aur loading state
   const [results, setResults] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
 
   // Sample car data (would come from API in real app)
+  // Sample cars - ye dummy data hai, asli app mein API se aayega
   const sampleCars = [
     {
       id: 1,
       make: "Toyota",
-      model: "Camry",
-      year: 2020,
-      price: 25000,
-      image: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      mileage: 15000,
-      fuelType: "Gasoline",
+      model: "Fortuner",
+      year: 2025,
+      price: 3500000, // Price in INR
+      image:
+        "https://images.unsplash.com/photo-1559416523-140ddc3d238c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      mileage: 3500,
+      fuelType: "Hybrid",
       transmission: "Automatic",
-      features: ["Bluetooth", "Backup Camera", "Cruise Control", "Keyless Entry"],
-      rating: 4.5,
-      location: "Seattle, WA"
+      features: ["360 Camera", "ADAS", "Wireless CarPlay", "Panoramic Sunroof"],
+      rating: 4.9,
+      location: "Mumbai, MH",
     },
     {
       id: 2,
-      make: "Honda",
-      model: "Civic",
-      year: 2021,
-      price: 22000,
-      image: "https://images.unsplash.com/photo-1590362891991-f776e747a588?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      mileage: 8000,
-      fuelType: "Gasoline",
-      transmission: "CVT",
-      features: ["Apple CarPlay", "Lane Assist", "Heated Seats", "Sunroof"],
-      rating: 4.7,
-      location: "Portland, OR"
+      make: "Maruti Suzuki",
+      model: "Swift",
+      year: 2026,
+      price: 950000, // Price in INR
+      image:
+        "https://images.unsplash.com/photo-1583267746897-2cf415887172?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      mileage: 1200,
+      fuelType: "Electric",
+      transmission: "Automatic",
+      features: ["Connected Car", "6 Airbags", "ABS", "Digital Cockpit"],
+      rating: 4.5,
+      location: "Delhi, DL",
     },
     {
       id: 3,
-      make: "Tesla",
-      model: "Model 3",
-      year: 2022,
-      price: 45000,
-      image: "https://images.unsplash.com/photo-1562016600-ece13e8ba570?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      mileage: 5000,
+      make: "Tata",
+      model: "Nexon",
+      year: 2025,
+      price: 1500000, // Price in INR
+      image:
+        "https://images.unsplash.com/photo-1616422285623-13ff8e0eccc0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      mileage: 800,
       fuelType: "Electric",
       transmission: "Automatic",
-      features: ["Autopilot", "Premium Sound", "Glass Roof", "Supercharging"],
-      rating: 4.9,
-      location: "San Francisco, CA"
+      features: ["500km Range", "Touch Panel", "Air Purifier", "8 Airbags"],
+      rating: 4.8,
+      location: "Bengaluru, KA",
     },
     {
       id: 4,
-      make: "BMW",
-      model: "X5",
-      year: 2019,
-      price: 55000,
-      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      mileage: 28000,
-      fuelType: "Diesel",
+      make: "Mahindra",
+      model: "XUV900",
+      year: 2027,
+      price: 2800000, // Price in INR
+      image:
+        "https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      mileage: 500,
+      fuelType: "Hydrogen",
       transmission: "Automatic",
-      features: ["Leather Seats", "Navigation", "Premium Audio", "Parking Sensors"],
-      rating: 4.3,
-      location: "Chicago, IL"
+      features: ["Level 3 Autonomy", "AR HUD", "Premium Audio", "7 Seats"],
+      rating: 4.9,
+      location: "Chennai, TN",
     },
     {
       id: 5,
-      make: "Ford",
-      model: "Mustang",
-      year: 2018,
-      price: 35000,
-      image: "https://images.unsplash.com/photo-1584345604476-8ec5f82d718c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      mileage: 32000,
-      fuelType: "Gasoline",
-      transmission: "Manual",
-      features: ["Convertible", "Leather Interior", "Performance Package", "Bluetooth"],
-      rating: 4.2,
-      location: "Las Vegas, NV"
+      make: "Honda",
+      model: "City",
+      year: 2026,
+      price: 1600000, // Price in INR
+      image:
+        "https://images.unsplash.com/photo-1609521263047-f8f205293f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      mileage: 2000,
+      fuelType: "Hybrid",
+      transmission: "CVT",
+      features: [
+        "Hybrid Drive",
+        "Leather Interior",
+        "Adaptive Cruise",
+        "Matrix LED",
+      ],
+      rating: 4.6,
+      location: "Hyderabad, TS",
     },
     {
       id: 6,
-      make: "Audi",
-      model: "A4",
-      year: 2021,
-      price: 42000,
-      image: "https://images.unsplash.com/photo-1606152421802-db97b9c7a11b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      mileage: 12000,
-      fuelType: "Gasoline",
+      make: "Hyundai",
+      model: "Ioniq",
+      year: 2025,
+      price: 1800000, // Price in INR
+      image:
+        "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      mileage: 1500,
+      fuelType: "Electric",
       transmission: "Automatic",
-      features: ["Quattro AWD", "Virtual Cockpit", "Bang & Olufsen Sound", "LED Headlights"],
-      rating: 4.6,
-      location: "Denver, CO"
-    }
+      features: [
+        "Bidirectional Charging",
+        "BlueLink 3.0",
+        "Bose Sound System",
+        "Wireless Charging",
+      ],
+      rating: 4.7,
+      location: "Pune, MH",
+    },
   ];
 
+  // Handle search function - search handle karne ka function
   const handleSearch = (params) => {
     setSearchParams(params);
     setIsSearching(true);
 
     // Simulate API search with setTimeout
+    // API call ka simulation setTimeout ke saath
     setTimeout(() => {
       const filtered = sampleCars.filter((car) => {
         return (
@@ -117,11 +138,11 @@ function App() {
             car.model.toLowerCase().includes(params.model.toLowerCase())) &&
           (!params.year || car.year.toString() === params.year) &&
           (!params.priceRange ||
-            (params.priceRange === "low" && car.price < 30000) ||
+            (params.priceRange === "low" && car.price < 1000000) ||
             (params.priceRange === "medium" &&
-              car.price >= 30000 &&
-              car.price < 50000) ||
-            (params.priceRange === "high" && car.price >= 50000))
+              car.price >= 1000000 &&
+              car.price < 2000000) ||
+            (params.priceRange === "high" && car.price >= 2000000))
         );
       });
 
@@ -131,10 +152,10 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-900 text-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Header />
-        <div className="mt-8 bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="mt-8 rounded-lg overflow-hidden">
           <SearchForm onSearch={handleSearch} isSearching={isSearching} />
         </div>
         <div className="mt-8">
