@@ -239,7 +239,7 @@ const SearchForm = ({ onSearch, isSearching, initialValues }) => {
                 </span>
               ) : (
                 <>
-                  Gaadiyaan Khojo
+                  Find Car
                   <svg
                     className="w-5 h-5 ml-2 -mr-1"
                     fill="currentColor"
