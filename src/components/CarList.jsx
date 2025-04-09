@@ -3,19 +3,19 @@ import CarCard from "./CarCard";
 
 const CarList = ({ results, isSearching }) => {
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6">
+    <div className="bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-700">
       {/* Header with count of cars - kitni gaadiya mili hai */}
-      <div className="flex justify-between items-center mb-6 border-b pb-4">
-        <h2 className="text-2xl font-bold text-gray-800 flex items-center">
-          <svg
-            className="w-7 h-7 mr-3 text-blue-600"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
+      <div className="flex justify-between items-center mb-6 border-b border-gray-700 pb-4">
+        <h2 className="text-2xl font-bold text-white flex items-center">
+          <svg className="w-7 h-7 mr-3 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+          </svg>
+          Search Results
+        </h2>
+        <div className="flex items-center">
+          <span className="bg-blue-900 text-blue-200 text-sm font-medium px-3 py-1.5 rounded-full shadow-md">
+            {results.length} cars found
+          </span>
               strokeLinejoin="round"
               strokeWidth="2"
               d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"

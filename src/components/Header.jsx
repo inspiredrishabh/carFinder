@@ -4,13 +4,13 @@ const Header = () => {
   return (
     // Header component - car finder ka main header
     <header className="relative rounded-xl overflow-hidden">
-      {/* Solid background color instead of gradient */}
-      <div className="absolute inset-0 bg-blue-600"></div>
+      {/* Solid background color for dark theme */}
+      <div className="absolute inset-0 bg-gray-800"></div>
       <div className="relative py-12 px-6 text-center text-white">
         <div className="flex justify-center mb-6">
           <div className="relative">
-            <div className="absolute -inset-1 rounded-full bg-white opacity-20 blur-sm"></div>
-            <div className="relative bg-white text-blue-600 rounded-full p-4 shadow-lg transform hover:scale-105 transition-all duration-300">
+            <div className="absolute -inset-1 rounded-full bg-blue-500 opacity-30 blur-sm"></div>
+            <div className="relative bg-blue-600 text-white rounded-full p-4 shadow-lg transform hover:scale-105 transition-all duration-300">
               {/* Car icon - gaadi ka icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -24,17 +24,19 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <h1 className="text-5xl font-extrabold tracking-tight">Car Finder</h1>
-        <p className="mt-4 text-xl opacity-80 max-w-xl mx-auto">
-          Find your perfect car match with our premium search engine
+        <h1 className="text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">
+          Car Finder 2025+
+        </h1>
+        <p className="mt-4 text-xl opacity-80 max-w-xl mx-auto text-gray-300">
+          Find your perfect futuristic car with our premium search engine
         </p>
         <div className="mt-8 flex justify-center space-x-6">
           {/* Popular gaadiya dekhne ka button */}
-          <button className="px-6 py-2.5 bg-white text-blue-600 font-medium rounded-lg shadow-md hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all duration-200 hover:shadow-lg">
+          <button className="px-6 py-2.5 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-200 hover:shadow-lg">
             Browse Popular
           </button>
           {/* How it works button - kaise kaam karta hai */}
-          <button className="px-6 py-2.5 bg-transparent border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all duration-200">
+          <button className="px-6 py-2.5 bg-transparent border-2 border-gray-300 text-gray-300 font-medium rounded-lg hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all duration-200">
             How It Works
           </button>
         </div>

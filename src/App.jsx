@@ -39,7 +39,7 @@ function App() {
       id: 2,
       make: "Maruti Suzuki",
       model: "Swift",
-      year: 2026,
+      year: 2025,
       price: 950000, // Price in INR
       image:
         "https://images.unsplash.com/photo-1583267746897-2cf415887172?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
@@ -69,7 +69,7 @@ function App() {
       id: 4,
       make: "Mahindra",
       model: "XUV900",
-      year: 2027,
+      year: 2025,
       price: 2800000, // Price in INR
       image:
         "https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
@@ -84,7 +84,7 @@ function App() {
       id: 5,
       make: "Honda",
       model: "City",
-      year: 2026,
+      year: 2025,
       price: 1600000, // Price in INR
       image:
         "https://images.unsplash.com/photo-1609521263047-f8f205293f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
