@@ -26,12 +26,12 @@ const Header = () => {
         
         {/* Main heading with gradient text */}
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">
-          Car Finder 2025+
+          Car Finder
         </h1>
         
         {/* Tagline */}
         <p className="mt-4 text-lg sm:text-xl opacity-80 max-w-xl mx-auto text-gray-300">
-          Future ki sabse badhiya gaadiyaan yahan khojo
+          Find the best car here at your specs
         </p>
         
         {/* Action buttons */}
